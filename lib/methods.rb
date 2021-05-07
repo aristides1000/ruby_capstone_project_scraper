@@ -9,15 +9,14 @@ class Methods
 
   def initialize
     @doc = Nokogiri::HTML(URI.open('https://celulares.mercadolibre.com.ve/'))
-    @articles_list= []
+    @articles_list = []
   end
 
   def csv_data
     @doc.css('.ui-search-item__group__element').each do |link|
       @articles_list << link.content
     end
-    @articles_list
-    CSV.open('../articles_list.csv', "w") do |csv|
+    CSV.open('../articles_list.csv', 'w') do |csv|
       csv << @articles_list
     end
   end
