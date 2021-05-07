@@ -16,7 +16,7 @@ class Methods
     @doc.css('.ui-search-item__group__element').each do |link|
       @articles_list << link.content
     end
-    CSV.open('../articles_list.csv', 'w') do |csv|
+    CSV.open('./articles_list.csv', 'w') do |csv|
       csv << @articles_list
     end
   end
