@@ -12,10 +12,17 @@ class Methods
     @articles_list = []
   end
 
-  def csv_data
+  def csv_method
     @doc.css('.ui-search-item__group__element').each do |link|
       @articles_list << link.content
     end
+
+    csv_data
+  end
+
+  private
+
+  def csv_data
     CSV.open('./articles_list.csv', 'w') do |csv|
       csv << @articles_list
     end
