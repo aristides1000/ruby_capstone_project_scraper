@@ -1,4 +1,4 @@
-require './lib/methods'
+require_relative './lib/methods'
 
 describe Methods do
   describe '#csv_data' do

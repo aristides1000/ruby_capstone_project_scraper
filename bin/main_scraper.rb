@@ -1,6 +1,6 @@
 #! /usr/bin/env ruby
 
-require '../lib/methods'
+require_relative '../lib/methods'
 
 list = Methods.new
 
