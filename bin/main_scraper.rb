@@ -2,6 +2,6 @@
 
 require '../lib/methods'
 
-list = Methods.new()
+list = Methods.new
 
 puts list.csv_data
